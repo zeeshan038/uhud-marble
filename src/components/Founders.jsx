@@ -6,7 +6,8 @@ const foundersData = [
   {
     id: 1,
     name: 'Rasheed Ali',
-    role: 'Co-Founder & CEO',
+    role: 'Managing Director & (Zonal Vice Chairman-Swabi)',
+    company: 'Uhud Marble Factory',
     bio: 'With extensive experience in the natural stone industry, Rasheed leads Uhud Marbles with a vision of sustainable luxury and unparalleled quality.',
     image: founder1,
     phone: '+92 311 9222343'
@@ -14,7 +15,8 @@ const foundersData = [
   {
     id: 2,
     name: 'Ayeen Khan',
-    role: 'Co-Founder & Managing Director',
+    role: 'Co-Founder',
+    company: 'Uhud Marbles',
     bio: 'Ayeen brings deep expertise in operations and design, ensuring that every piece of marble we source meets the highest standards of beauty and structural integrity.',
     image: founder2,
     phone: '+92 344 3170766'
@@ -37,7 +39,9 @@ const Founders = () => {
                 <img src={founder.image} alt={founder.name} className="founder-image" />
               </div>
               <div className="founder-info" style={{ textAlign: 'center', padding: '1.5rem 1rem' }}>
-                <h3 style={{ marginBottom: '0.5rem' }}>{founder.name}</h3>
+                <h3 style={{ marginBottom: '0.2rem' }}>{founder.name}</h3>
+                <p style={{ margin: '0 0 0.2rem 0', fontWeight: 'bold', color: 'var(--text-dark)' }}>{founder.role}</p>
+                <p style={{ margin: '0 0 1rem 0', fontWeight: 'bold', color: 'var(--text-dark)' }}>{founder.company}</p>
                 <a href={`tel:${founder.phone.replace(/\\s+/g, '')}`} style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 500, fontSize: '1.1rem' }}>
                   {founder.phone}
                 </a>
